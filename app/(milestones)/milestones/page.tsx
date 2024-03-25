@@ -21,11 +21,19 @@ export default function DailyReportDetail() {
   return (
     <div>
       <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-6 lg:col-span-6">
-          <label htmlFor="reporter" className="block mb-1">税理士</label>
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="report_date" className="block mb-1">開始日</label>
+          <InputDate id="report_date" />
+        </div>
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="report_date" className="block mb-1">終了日</label>
+          <InputDate id="report_date" />
+        </div>
+        <div className="col-span-6 lg:col-span-4">
+          <label htmlFor="reporter" className="block mb-1">作成者</label>
           <InputText id="reporter" />
         </div>
-        <div className="col-span-6 lg:col-span-6">
+        <div className="col-span-6 lg:col-span-4">
           <label htmlFor="reporter" className="block mb-1">関与先</label>
           <InputText id="reporter" />
         </div>
@@ -43,7 +51,7 @@ export default function DailyReportDetail() {
             <tr className="bg-gray-100">
               <th className="border p-2">開始日</th>
               <th className="border p-2">終了日</th>
-              <th className="border p-2">税理士</th>
+              <th className="border p-2">作成者</th>
               <th className="border p-2">関与先</th>
               <th className="border p-2">更新日時</th>
               <th className="border p-2">作成日時</th>

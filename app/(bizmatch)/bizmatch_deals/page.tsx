@@ -103,7 +103,7 @@ export default function DailyReportDetail() {
                 公式文書二重チェック
               </td>
               <td className="border p-2">
-                <Anchor href="/bizmatch_applications/show">〇〇申請書確認依頼</Anchor>
+                <Anchor href="/bizmatch_deals/show">〇〇申請書確認依頼</Anchor>
               </td>
               <td className="border p-2">
                 応募
@@ -141,7 +141,7 @@ export default function DailyReportDetail() {
                 公式文書二重チェック
               </td>
               <td className="border p-2">
-                <Anchor href="/bizmatch_applications/show">〇〇申請書確認依頼</Anchor>
+                <Anchor href="/bizmatch_deals/show">〇〇申請書確認依頼</Anchor>
               </td>
               <td className="border p-2">
                 応募
@@ -179,7 +179,7 @@ export default function DailyReportDetail() {
                 公式文書二重チェック
               </td>
               <td className="border p-2">
-                <Anchor href="/bizmatch_applications/show">〇〇申請書確認依頼</Anchor>
+                <Anchor href="/bizmatch_deals/show">〇〇申請書確認依頼</Anchor>
               </td>
               <td className="border p-2">
                 応募

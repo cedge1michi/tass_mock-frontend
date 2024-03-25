@@ -14,13 +14,13 @@ import { MouseEvent } from "react";
 
 export default function DailyReport() {
   const onClickEdit = (event: MouseEvent<HTMLButtonElement>) => {
-    window.location.href = '/bizmatch_deals/edit'
+    window.location.href = '/bizmatch_applications/edit'
   };
   const onClickCancel = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
   };
   const onClickOrder = (event: MouseEvent<HTMLButtonElement>) => {
-    window.location.href = '/bizmatch_deals/confirm'
+    window.location.href = '/bizmatch_applications/order'
   };
   const onClickBack = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
@@ -101,10 +101,14 @@ export default function DailyReport() {
           <label htmlFor="memo" className="block mb-1">発注コメント</label>
           <InputTextArea id="memo" rows={3} disabled />
         </div>
+        <div className="col-span-full">
+          <label htmlFor="memo" className="block mb-1">受注コメント</label>
+          <InputTextArea id="memo" rows={3} />
+        </div>
       </div>
 
       <div className="mt-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickOrder}>受注(依頼者のみ)</Button>
+        <Button color="blue" onClick={onClickOrder}>受注</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
     </div>
