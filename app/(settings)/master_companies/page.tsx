@@ -21,13 +21,21 @@ export default function DailyReportDetail() {
   return (
     <div>
       <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-6 lg:col-span-6">
+        <div className="col-span-6 lg:col-span-3">
           <label htmlFor="reporter" className="block mb-1">名称</label>
           <InputText id="reporter" />
         </div>
-        <div className="col-span-6 lg:col-span-6">
+        <div className="col-span-6 lg:col-span-5">
           <label htmlFor="reporter" className="block mb-1">住所</label>
           <InputText id="reporter" />
+        </div>
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="report_date" className="block mb-1">更新開始</label>
+          <InputDate id="report_date" />
+        </div>
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="report_date" className="block mb-1">更新終了</label>
+          <InputDate id="report_date" />
         </div>
       </div>
 
@@ -48,34 +56,6 @@ export default function DailyReportDetail() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border p-2">
-                <Anchor href="/master_companies/show">支援サービス株式会社</Anchor>
-              </td>
-              <td className="border p-2">
-                東京都中央区銀座５－５－５
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-            </tr>
-            <tr>
-              <td className="border p-2">
-                <Anchor href="/master_companies/show">支援サービス株式会社</Anchor>
-              </td>
-              <td className="border p-2">
-                東京都中央区銀座５－５－５
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-            </tr>
             <tr>
               <td className="border p-2">
                 <Anchor href="/master_companies/show">支援サービス株式会社</Anchor>

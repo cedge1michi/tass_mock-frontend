@@ -77,12 +77,20 @@ export default function DailyReport() {
           <label htmlFor="attachment" className="block mb-1">添付ファイル</label>
           <InputFile id="attachment" disabled />
         </div>
+        <div className="col-span-3 lg:col-span-4">
+          <label htmlFor="company" className="block mb-1">依頼者</label>
+          <InputText id="company" disabled />
+        </div>
+        <div className="col-span-3 lg:col-span-2">
+          <label htmlFor="company" className="block mb-1">依頼日時</label>
+          <InputDatetime id="company" disabled />
+        </div>
       </div>
 
       <div className="mt-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickEdit}>編集(応募者のみ)</Button>
-        <Button color="red" onClick={onClickCancel}>取消(応募者かつ応募なし)</Button>
-        <Button color="blue" onClick={onClickApply}>応募(応募者のみ)</Button>
+        <Button color="blue" onClick={onClickEdit}>編集</Button>
+        <Button color="red" onClick={onClickCancel}>取消</Button>
+        <Button color="blue" onClick={onClickApply}>応募</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
     </div>

@@ -57,8 +57,6 @@ export default function DailyReport() {
               <th className="border p-2">業務名</th>
               <th className="border p-2">関与先</th>
               <th className="border p-2">報告者</th>
-              <th className="border p-2">更新日時</th>
-              <th className="border p-2">作成日時</th>
             </tr>
           </thead>
           <tbody>
@@ -77,58 +75,6 @@ export default function DailyReport() {
               </td>
               <td className="border p-2">
                 支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-            </tr>
-            <tr>
-              <td className="border p-2">
-                2024-02-05 10:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 12:00:00
-              </td>
-              <td className="border p-2">
-                <Anchor href="/daily_report_bodies/show">サンプル</Anchor>
-              </td>
-              <td className="border p-2">
-                支援サービス株式会社
-              </td>
-              <td className="border p-2">
-                支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-            </tr>
-            <tr>
-              <td className="border p-2">
-                2024-02-05 10:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 12:00:00
-              </td>
-              <td className="border p-2">
-                <Anchor href="/daily_report_bodies/show">サンプル</Anchor>
-              </td>
-              <td className="border p-2">
-                支援サービス株式会社
-              </td>
-              <td className="border p-2">
-                支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
               </td>
             </tr>
           </tbody>

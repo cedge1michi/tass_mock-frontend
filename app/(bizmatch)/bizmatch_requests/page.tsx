@@ -79,8 +79,8 @@ export default function DailyReportDetail() {
               <th className="border p-2">タイトル</th>
               <th className="border p-2">期限</th>
               <th className="border p-2">予算</th>
-              <th className="border p-2">更新日時</th>
-              <th className="border p-2">作成日時</th>
+              <th className="border p-2">依頼者</th>
+              <th className="border p-2">依頼日時</th>
             </tr>
           </thead>
           <tbody>
@@ -101,7 +101,7 @@ export default function DailyReportDetail() {
                 10,000
               </td>
               <td className="border p-2">
-                2024-02-05 16:00:00
+                支援　太郎
               </td>
               <td className="border p-2">
                 2024-02-05 16:00:00

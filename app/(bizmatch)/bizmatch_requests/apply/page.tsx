@@ -77,6 +77,16 @@ export default function DailyReport() {
           <label htmlFor="attachment" className="block mb-1">添付ファイル</label>
           <InputFile id="attachment" disabled />
         </div>
+        <div className="col-span-3 lg:col-span-4">
+          <label htmlFor="company" className="block mb-1">依頼者</label>
+          <InputText id="company" disabled />
+        </div>
+        <div className="col-span-3 lg:col-span-2">
+          <label htmlFor="company" className="block mb-1">依頼日時</label>
+          <InputDatetime id="company" disabled />
+        </div>
+        <div className="col-span-6 lg:col-span-6">
+        </div>
         <div className="col-span-6 lg:col-span-2">
           <label htmlFor="company" className="block mb-1">応募金額</label>
           <InputText id="company" />

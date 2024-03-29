@@ -60,8 +60,6 @@ export default function DailyReportDetail() {
               <th className="border p-2">処理年月日</th>
               <th className="border p-2">税務代理権限書提出日</th>
               <th className="border p-2">担当税理士</th>
-              <th className="border p-2">更新日時</th>
-              <th className="border p-2">作成日時</th>
             </tr>
           </thead>
           <tbody>
@@ -86,70 +84,6 @@ export default function DailyReportDetail() {
               </td>
               <td className="border p-2">
                 支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-            </tr>
-            <tr>
-              <td className="border p-2">
-                税務代理(1号)
-              </td>
-              <td className="border p-2">
-                支援サービス株式会社
-              </td>
-              <td className="border p-2">
-                <Anchor href="/activity_reports/show">所得税確定申告</Anchor>
-              </td>
-              <td className="border p-2">
-                申告書作成
-              </td>
-              <td className="border p-2">
-                2024-02-05
-              </td>
-              <td className="border p-2">
-                2024-02-05
-              </td>
-              <td className="border p-2">
-                支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-            </tr>
-            <tr>
-              <td className="border p-2">
-                税務代理(1号)
-              </td>
-              <td className="border p-2">
-                支援サービス株式会社
-              </td>
-              <td className="border p-2">
-                <Anchor href="/activity_reports/show">所得税確定申告</Anchor>
-              </td>
-              <td className="border p-2">
-                申告書作成
-              </td>
-              <td className="border p-2">
-                2024-02-05
-              </td>
-              <td className="border p-2">
-                2024-02-05
-              </td>
-              <td className="border p-2">
-                支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
               </td>
             </tr>
           </tbody>
