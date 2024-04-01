@@ -34,7 +34,7 @@ export default function RootLayout({
           <div className="m-2">
             {children}
           </div>
-          <Footer />
+          <Footer copyright={'@ 2024 株式会社STR'} />
         </div>
       </body>
     </html>

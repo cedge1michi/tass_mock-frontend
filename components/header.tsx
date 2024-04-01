@@ -6,6 +6,9 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Breadcrumb from "./breadcrumb";
 import Dropdown from './dropdown';
 
+/**
+ * ヘッダーを生成する。
+ */
 export default function Header() {
   let humberger_state = false; // false === close
   const humberger_toggle = (event: any) => {
