@@ -33,15 +33,15 @@ export default function Header() {
     }
   }
   return (
-    <div className='text-gray-200'>
+    <div className='text-gray-100'>
       <header className="fixed z-20 top-0 w-[100%] h-20">
-        <div className='py-1 bg-gray-800'>
+        <div className='py-1 bg-indigo-400 bg-opacity-100'>
           <div className='lg:flex lg:justify-between'>
 
             <div className='flex justify-between items-center lg:inline-flex lg:items-center peer'>
-              <div className='inline-flex flex-shrink-0 items-center py-2'>
-                <img src="/tass.png" width={96} />
-                <span className="ms-2 text-xl font-semibold">税理士支援サービス</span>
+              <div className='inline-flex flex-shrink-0 items-center py-2 ms-2'>
+                <img src="/TaxService_500x500_white.png" width={56} />
+                <span className="ms-1 text-xl font-semibold">税理士支援サービス</span>
               </div>
               <div className="lg:hidden">
                 <button type="button" className="p-2 rounded-lg border border-gray-200 hover:bg-gray-400 disabled:opacity-50 disabled:pointer-events-none" onClick={humberger_toggle}>
@@ -87,8 +87,7 @@ export default function Header() {
                   <Dropdown
                     items={[
                       { label: '依頼一覧', url: '/bizmatch_requests' },
-                      { label: '応募一覧', url: '/bizmatch_applications' },
-                      { label: '取引一覧', url: '/bizmatch_deals' }
+                      { label: '案件一覧', url: '/bizmatch_deals' }
                     ]}
                   >
                     ビジネスマッチング
@@ -99,6 +98,7 @@ export default function Header() {
                     items={[
                       { label: '関与先一覧', url: '/master_companies' },
                       { label: '税理士一覧', url: '/master_taxaccountants' },
+                      { label: 'グループ一覧', url: '/master_groups' },
                       { label: 'システム管理', url: '/admin' }
                     ]}
                   >

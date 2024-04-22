@@ -58,7 +58,7 @@ export default function DailyReportDetail() {
           <tbody>
             <tr>
               <td className="border p-2">
-                <Anchor href="/milestones/show">2023-04-01</Anchor>
+                <Anchor href="/milestones/edit">2023-04-01</Anchor>
               </td>
               <td className="border p-2">
                 2024-03-31

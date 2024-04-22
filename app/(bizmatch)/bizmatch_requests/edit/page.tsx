@@ -60,12 +60,12 @@ export default function DailyReport() {
           <InputText id="company" />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="process_date" className="block mb-1">期限</label>
-          <InputDatetime id="process_date" />
-        </div>
-        <div className="col-span-6 lg:col-span-2">
           <label htmlFor="company" className="block mb-1">予算</label>
           <InputText id="company" />
+        </div>
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="process_date" className="block mb-1">期限</label>
+          <InputDatetime id="process_date" />
         </div>
         <div className="col-span-full">
           <label htmlFor="memo" className="block mb-1">内容</label>
@@ -75,10 +75,20 @@ export default function DailyReport() {
           <label htmlFor="attachment" className="block mb-1">添付ファイル</label>
           <InputFile id="attachment" />
         </div>
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="company" className="block mb-1">応募金額</label>
+          <InputText id="company" />
+        </div>
+        <div className="col-span-full">
+          <label htmlFor="memo" className="block mb-1">応募コメント</label>
+          <InputTextArea id="memo" rows={3} />
+        </div>
       </div>
 
-      <div className="mt-2 inline-flex gap-x-2">
+      <div className="my-2 inline-flex gap-x-2">
         <Button color="blue" onClick={onClickEdit}>変更</Button>
+        <Button color="blue" onClick={onClickEdit}>応募</Button>
+        <Button color="red" onClick={onClickEdit}>削除</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
     </div>

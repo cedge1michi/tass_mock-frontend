@@ -22,11 +22,11 @@ export default function DailyReportDetail() {
     <div>
       <div className="grid grid-cols-12 gap-2">
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="report_date" className="block mb-1">開始日</label>
+          <label htmlFor="report_date" className="block mb-1">処理開始日</label>
           <InputDate id="report_date" />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="report_date" className="block mb-1">終了日</label>
+          <label htmlFor="report_date" className="block mb-1">処理終了日</label>
           <InputDate id="report_date" />
         </div>
         <div className="col-span-4 lg:col-span-3">
@@ -58,7 +58,7 @@ export default function DailyReportDetail() {
               <th className="border p-2">内容</th>
               <th className="border p-2">てん末</th>
               <th className="border p-2">処理年月日</th>
-              <th className="border p-2">税務代理権限書提出日</th>
+              <th className="border p-2">作成者</th>
               <th className="border p-2">担当税理士</th>
             </tr>
           </thead>
@@ -71,7 +71,7 @@ export default function DailyReportDetail() {
                 支援サービス株式会社
               </td>
               <td className="border p-2">
-                <Anchor href="/activity_reports/show">所得税確定申告</Anchor>
+                <Anchor href="/activity_reports/edit">所得税確定申告</Anchor>
               </td>
               <td className="border p-2">
                 申告書作成
@@ -80,7 +80,7 @@ export default function DailyReportDetail() {
                 2024-02-05
               </td>
               <td className="border p-2">
-                2024-02-05
+                支援　太郎
               </td>
               <td className="border p-2">
                 支援　太郎

@@ -58,7 +58,7 @@ export default function DailyReportDetail() {
           <tbody>
             <tr>
               <td className="border p-2">
-                <Anchor href="/master_companies/show">支援サービス株式会社</Anchor>
+                <Anchor href="/master_companies/edit">支援サービス株式会社</Anchor>
               </td>
               <td className="border p-2">
                 東京都中央区銀座５－５－５

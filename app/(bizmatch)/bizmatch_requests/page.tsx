@@ -77,10 +77,8 @@ export default function DailyReportDetail() {
               <th className="border p-2">種別</th>
               <th className="border p-2">カテゴリー</th>
               <th className="border p-2">タイトル</th>
-              <th className="border p-2">期限</th>
               <th className="border p-2">予算</th>
-              <th className="border p-2">依頼者</th>
-              <th className="border p-2">依頼日時</th>
+              <th className="border p-2">期限</th>
             </tr>
           </thead>
           <tbody>
@@ -92,19 +90,16 @@ export default function DailyReportDetail() {
                 公式文書二重チェック
               </td>
               <td className="border p-2">
-                <Anchor href="/bizmatch_requests/show">〇〇申請書確認依頼</Anchor>
-              </td>
-              <td className="border p-2">
-                2024-02-05 18:00
+                <div className="inline-flex items-center">
+                  <Anchor href="/bizmatch_requests/edit">〇〇申請書確認依頼</Anchor>
+                  <span className="ml-1 px-1 pb-[2px] text-xs text-gray-100 rounded-lg bg-orange-500">New</span>
+                </div>
               </td>
               <td className="border p-2">
                 10,000
               </td>
               <td className="border p-2">
-                支援　太郎
-              </td>
-              <td className="border p-2">
-                2024-02-05 16:00:00
+                2024-02-05 18:00
               </td>
             </tr>
           </tbody>

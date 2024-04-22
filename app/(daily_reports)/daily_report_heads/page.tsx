@@ -32,20 +32,19 @@ export default function DailyReportDetail() {
           <label htmlFor="report_date" className="block mb-1">終了日</label>
           <InputDate id="report_date" />
         </div>
-        <div className="col-span-full lg:col-span-3">
-          <label htmlFor="reporter" className="block mb-1">報告者</label>
-          <InputText id="reporter" />
-        </div>
         <div className="col-span-full lg:col-span-5">
           <label htmlFor="report_content" className="block mb-1">報告内容</label>
           <InputText id="report_content" />
+        </div>
+        <div className="col-span-full lg:col-span-3">
+          <label htmlFor="reporter" className="block mb-1">作成者</label>
+          <InputText id="reporter" />
         </div>
       </div>
 
       <div className="mt-2 inline-flex gap-x-2">
         <Button color="blue" onClick={onClickFiler}>絞り込み</Button>
         <Button color="gray" onClick={onClickReset}>リセット</Button>
-        <Button color="blue" onClick={onClickDate}>予定から作成</Button>
         <Button color="blue" onClick={onClickNew}>新規作成</Button>
       </div>
 
@@ -54,20 +53,20 @@ export default function DailyReportDetail() {
           <thead>
             <tr className="bg-gray-100">
               <th className="border p-2">報告日</th>
-              <th className="border p-2">報告者</th>
               <th className="border p-2">報告内容</th>
+              <th className="border p-2">作成者</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td className="border p-2">
-                <Anchor href="/daily_report_heads/show">2024-02-05</Anchor>
-              </td>
-              <td className="border p-2">
-                支援　太郎
+                <Anchor href="/daily_report_heads/edit">2024-02-05</Anchor>
               </td>
               <td className="border p-2">
                 サンプル
+              </td>
+              <td className="border p-2">
+                支援　太郎
               </td>
             </tr>
           </tbody>

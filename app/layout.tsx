@@ -31,7 +31,7 @@ export default function RootLayout({
           <Header />
         </div>
         <div className="relative z-10">
-          <div className="m-2">
+          <div className="m-2 text-sm">
             {children}
           </div>
           <Footer copyright={'@ 2024 株式会社STR'} />

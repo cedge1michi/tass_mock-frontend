@@ -25,15 +25,15 @@ export default function DailyReport() {
         <div className="grid grid-cols-12 gap-2">
           <div className="col-span-6 lg:col-span-2">
             <label htmlFor="report_date" className="block mb-1">開始日</label>
-            <InputDate id="report_date" />
+            <InputDate id="report_date" disabled />
           </div>
           <div className="col-span-6 lg:col-span-2">
             <label htmlFor="report_date" className="block mb-1">終了日</label>
-            <InputDate id="report_date" />
+            <InputDate id="report_date" disabled />
           </div>
           <div className="col-span-6 lg:col-span-8">
             <label htmlFor="reporter" className="block mb-1">関与先</label>
-            <InputText id="reporter" />
+            <InputText id="reporter" disabled />
           </div>
         </div>
 
@@ -246,9 +246,6 @@ export default function DailyReport() {
               </tr>
             </tbody>
           </table>
-          <div className="mt-2">
-            <Pagination />
-          </div>
         </div>
       </div>
     </div>

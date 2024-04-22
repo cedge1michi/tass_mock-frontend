@@ -26,7 +26,7 @@ export default function DailyReport() {
   return (
     <div>
       <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-full lg:col-span-5">
+        <div className="col-span-full lg:col-span-4">
           <label htmlFor="job_type" className="block mb-1">業務区分</label>
           <InputCheckbox
             items={[
@@ -36,9 +36,13 @@ export default function DailyReport() {
             ]}
           />
         </div>
-        <div className="col-span-full lg:col-span-7">
+        <div className="col-span-full lg:col-span-5">
           <label htmlFor="company" className="block mb-1">委嘱者</label>
           <InputText id="company" />
+        </div>
+        <div className="col-span-full lg:col-span-3">
+          <label htmlFor="company" className="block mb-1">作成者</label>
+          <InputText id="company" disabled />
         </div>
         <div className="col-span-6 lg:col-span-3">
           <label htmlFor="content" className="block mb-1">内容</label>

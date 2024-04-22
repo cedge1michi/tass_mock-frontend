@@ -41,7 +41,7 @@ export default function DailyReport() {
           <InputDate id="report_date" disabled />
         </div>
         <div className="col-span-6 lg:col-span-3">
-          <label htmlFor="reporter" className="block mb-1">報告者</label>
+          <label htmlFor="reporter" className="block mb-1">作成者</label>
           <InputText id="reporter" disabled />
         </div>
         <div className="col-span-full">

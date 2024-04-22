@@ -22,7 +22,7 @@ export default function Breadcrumb() {
       break;
     case '/daily_report_heads/edit':
       settings.push({ label: '業務日報一覧', path: '/daily_report_heads' });
-      settings.push({ label: '業務日報表示', path: '/daily_report_heads/show' });
+      // settings.push({ label: '業務日報表示', path: '/daily_report_heads/show' });
       settings.push({ label: '業務日報編集', path: '/daily_report_heads/edit' });
       break;
     case '/daily_report_bodies':
@@ -34,7 +34,7 @@ export default function Breadcrumb() {
       break;
     case '/daily_report_bodies/edit':
       settings.push({ label: '業務日報明細一覧', path: '/daily_report_bodies' });
-      settings.push({ label: '業務日報明細表示', path: '/daily_report_bodies/show' });
+      // settings.push({ label: '業務日報明細表示', path: '/daily_report_bodies/show' });
       settings.push({ label: '業務日報明細編集', path: '/daily_report_bodies/edit' });
       break;
     case '/daily_report_bodies/new':
@@ -54,7 +54,6 @@ export default function Breadcrumb() {
       break;
     case '/activity_reports/edit':
       settings.push({ label: '業務処理簿一覧', path: '/activity_reports' });
-      settings.push({ label: '業務処理簿表示', path: '/activity_reports/show' });
       settings.push({ label: '業務処理簿編集', path: '/activity_reports/edit' });
       break;
     case '/bizmatch_requests':
@@ -70,7 +69,6 @@ export default function Breadcrumb() {
       break;
     case '/bizmatch_requests/edit':
       settings.push({ label: '依頼一覧', path: '/bizmatch_requests' });
-      settings.push({ label: '依頼表示', path: '/bizmatch_requests/show' });
       settings.push({ label: '依頼編集', path: '/bizmatch_requests/edit' });
       break;
     case '/bizmatch_requests/apply':
@@ -96,11 +94,11 @@ export default function Breadcrumb() {
       settings.push({ label: '発注', path: '/bizmatch_applications/order' });
       break;
     case '/bizmatch_deals':
-      settings.push({ label: '取引一覧', path: '/bizmatch_deals' });
+      settings.push({ label: '案件一覧', path: '/bizmatch_deals' });
       break;
-    case '/bizmatch_deals/show':
-      settings.push({ label: '取引一覧', path: '/bizmatch_deals' });
-      settings.push({ label: '取引表示', path: '/bizmatch_deals/show' });
+    case '/bizmatch_deals/edit':
+      settings.push({ label: '案件一覧', path: '/bizmatch_deals' });
+      settings.push({ label: '案件編集', path: '/bizmatch_deals/show' });
       break;
     case '/bizmatch_deals/confirm':
       settings.push({ label: '取引一覧', path: '/bizmatch_deals' });
@@ -120,7 +118,6 @@ export default function Breadcrumb() {
       break;
     case '/milestones/edit':
       settings.push({ label: '目標一覧', path: '/milestones' });
-      settings.push({ label: '目標表示', path: '/milestones/show' });
       settings.push({ label: '目標編集', path: '/milestones/edit' });
       break;
     case '/all_progresses':
@@ -143,7 +140,6 @@ export default function Breadcrumb() {
       break;
     case '/master_companies/edit':
       settings.push({ label: '関与先一覧', path: '/master_companies' });
-      settings.push({ label: '関与先表示', path: '/master_companies/show' });
       settings.push({ label: '関与先編集', path: '/master_companies/edit' });
       break;
     case '/master_taxaccountants':
@@ -166,7 +162,7 @@ export default function Breadcrumb() {
 
   return (
     <>
-      <ol className="flex items-center whitespace-nowrap p-2 bg-gray-300">
+      <ol className="flex items-center whitespace-nowrap p-2 bg-gray-200">
         {settings.map(({ label, path }, index) => (
           index < settings.length - 1 ?
             <li className="inline-flex items-center" key={label}>

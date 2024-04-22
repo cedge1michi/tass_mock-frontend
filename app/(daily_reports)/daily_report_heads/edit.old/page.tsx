@@ -2,7 +2,6 @@
 import Anchor from "@/components/anchor";
 import Breadcrumb from "@/components/breadcrumb";
 import Button from "@/components/button";
-import InputCheckbox from "@/components/input_checkbox";
 import InputDate from "@/components/input_date";
 import InputText from "@/components/input_text";
 import InputTextArea from "@/components/input_textarea";
@@ -22,22 +21,22 @@ export default function DailyReport() {
   return (
     <div>
       <div className="grid grid-cols-12 gap-2">
-        <div className="col-span-full lg:col-span-2">
-          <label htmlFor="report_date" className="block font-medium mb-2">対象日</label>
-          <InputDate id="report_date" />
+        <div className="col-span-6 lg:col-span-2">
+          <label htmlFor="report_date" className="block mb-1">報告日</label>
+          <InputDate id="report_date" disabled />
         </div>
-        <div className="col-span-full lg:row-start-2 lg:col-span-2">
-          <InputCheckbox
-            items={[
-              { label: '予定をインポート', key: 'import_type[0]' }
-            ]}
-            checked
-          />
+        <div className="col-span-6 lg:col-span-3">
+          <label htmlFor="reporter" className="block mb-1">報告者</label>
+          <InputText id="reporter" disabled />
+        </div>
+        <div className="col-span-full">
+          <label htmlFor="report_content" className="block mb-1">業務内容</label>
+          <InputTextArea id="report_content" rows={3} />
         </div>
       </div>
 
       <div className="mt-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickFiler}>作成</Button>
+        <Button color="blue" onClick={onClickFiler}>変更</Button>
         <Button color="gray" onClick={onClickReset}>戻る</Button>
       </div>
     </div>

@@ -40,7 +40,7 @@ export default function DailyReport() {
             <InputText id="company" />
           </div>
           <div className="col-span-6 lg:col-span-2">
-            <label htmlFor="reporter" className="block mb-1">報告者</label>
+            <label htmlFor="reporter" className="block mb-1">作成者</label>
             <InputText id="reporter" />
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function DailyReport() {
         <div className="mt-2 inline-flex gap-x-2">
           <Button color="blue" onClick={onClickFiler}>絞り込み</Button>
           <Button color="gray" onClick={onClickReset}>リセット</Button>
-          <Button color="blue" onClick={onClickAdd}>新規作成</Button>
+          {/* <Button color="blue" onClick={onClickAdd}>新規作成</Button> */}
         </div>
 
         <div className="mt-4">
@@ -59,7 +59,7 @@ export default function DailyReport() {
                 <th className="border p-2">終了日時</th>
                 <th className="border p-2">業務名</th>
                 <th className="border p-2">関与先</th>
-                <th className="border p-2">報告者</th>
+                <th className="border p-2">作成者</th>
               </tr>
             </thead>
             <tbody>
@@ -71,7 +71,7 @@ export default function DailyReport() {
                   2024-02-05 12:00:00
                 </td>
                 <td className="border p-2">
-                  <Anchor href="/daily_report_bodies/show">サンプル</Anchor>
+                  <Anchor href="/daily_report_bodies/edit">サンプル</Anchor>
                 </td>
                 <td className="border p-2">
                   支援サービス株式会社

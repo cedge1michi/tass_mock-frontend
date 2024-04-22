@@ -175,9 +175,6 @@ export default function DailyReport() {
               </tr>
             </tbody>
           </table>
-          <div className="mt-2">
-            <Pagination />
-          </div>
         </div>
       </div>
     </div>
