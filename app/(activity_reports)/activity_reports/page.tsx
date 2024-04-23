@@ -29,16 +29,20 @@ export default function DailyReportDetail() {
           <label htmlFor="report_date" className="block mb-1">処理終了日</label>
           <InputDate id="report_date" />
         </div>
-        <div className="col-span-4 lg:col-span-3">
+        <div className="col-span-4 lg:col-span-2">
           <label htmlFor="reporter" className="block mb-1">委嘱者</label>
           <InputText id="reporter" />
         </div>
-        <div className="col-span-4 lg:col-span-3">
+        <div className="col-span-4 lg:col-span-2">
           <label htmlFor="reporter" className="block mb-1">内容</label>
           <InputText id="reporter" />
         </div>
         <div className="col-span-4 lg:col-span-2">
           <label htmlFor="report_content" className="block mb-1">てん末</label>
+          <InputText id="report_content" />
+        </div>
+        <div className="col-span-4 lg:col-span-2">
+          <label htmlFor="report_content" className="block mb-1">作成者</label>
           <InputText id="report_content" />
         </div>
       </div>
