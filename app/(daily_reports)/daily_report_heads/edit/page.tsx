@@ -45,7 +45,6 @@ export default function DailyReport() {
         <Button color="blue" onClick={onClickEdit}>変更</Button>
         <Button color="red" onClick={onClickDelete}>削除</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
-        <Button color="blue" onClick={onClickAdd}>明細追加</Button>
       </div>
 
       <div className="mt-4">
@@ -75,6 +74,10 @@ export default function DailyReport() {
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <div className="mt-2 inline-flex gap-x-2">
+        <Button color="blue" onClick={onClickAdd}>明細追加</Button>
       </div>
     </div>
   );

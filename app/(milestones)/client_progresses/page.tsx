@@ -38,7 +38,8 @@ export default function DailyReport() {
               showMonthYearPicker
               showFullMonthYearPicker
               locale="ja"  // DatePicker のロケールを日本語に設定
-              className="rounded-lg border-gray-300 w-full"
+              className="rounded-lg border-gray-300 bg-gray-100 w-full"
+              disabled
             />
           </div>
           <div className="col-span-full lg:col-span-1">
@@ -50,11 +51,16 @@ export default function DailyReport() {
               showMonthYearPicker
               showFullMonthYearPicker
               locale="ja"  // DatePicker のロケールを日本語に設定
-              className="rounded-lg border-gray-300 w-full"
+              className="rounded-lg border-gray-300 bg-gray-100 w-full"
+              disabled
             />
           </div>
-          <div className="col-span-6 lg:col-span-10">
+          <div className="col-span-6 lg:col-span-4">
             <label htmlFor="job_name" className="block mb-1">関与先</label>
+            <InputText id="job_name" disabled />
+          </div>
+          <div className="col-span-6 lg:col-span-6">
+            <label htmlFor="job_name" className="block mb-1">担当者</label>
             <InputText id="job_name" />
           </div>
         </div>
@@ -109,7 +115,7 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border p-2">関与先</th>
+                <th className="border p-2">担当者</th>
                 <th className="border p-2">契約報酬</th>
                 <th className="border p-2">目標時間</th>
                 <th className="border p-2">消費報酬</th>
@@ -122,7 +128,9 @@ export default function DailyReport() {
             <tbody>
               <tr>
                 <td className="border p-2">
-                  <Anchor href="/client_progresses">支援サービス株式会社</Anchor>
+                  <Anchor href="/individual_progresses">
+                    支援　太郎
+                  </Anchor>
                 </td>
                 <td className="border p-2">
                   999
@@ -145,6 +153,40 @@ export default function DailyReport() {
                 <td className="border p-2">
                   999
                 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="mt-4">
+          <table className="table-auto w-[100%]">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border p-2">年月</th>
+                <th className="border p-2">報酬</th>
+                <th className="border p-2">時間</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border p-2">2024/04(Accordion: Summary)</td>
+                <td className="border p-2">999</td>
+                <td className="border p-2">999</td>
+              </tr>
+              <tr>
+                <td className="border p-2">支援　太郎(Detail)</td>
+                <td className="border p-2">999</td>
+                <td className="border p-2">999</td>
+              </tr>
+              <tr>
+                <td className="border p-2">2024/05(Accordion: Summary)</td>
+                <td className="border p-2">999</td>
+                <td className="border p-2">999</td>
+              </tr>
+              <tr>
+                <td className="border p-2">支援　太郎(Detail)</td>
+                <td className="border p-2">999</td>
+                <td className="border p-2">999</td>
               </tr>
             </tbody>
           </table>

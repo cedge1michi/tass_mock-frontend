@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <div className='text-gray-100'>
       <header className="fixed z-20 top-0 w-[100%] h-20">
-        <div className='py-1 bg-indigo-400 bg-opacity-100'>
+        <div className='py-1 bg-indigo-500 bg-opacity-100'>
           <div className='lg:flex lg:justify-between'>
 
             <div className='flex justify-between items-center lg:inline-flex lg:items-center peer'>
@@ -80,7 +80,7 @@ export default function Header() {
                       { label: '全体進捗状況', url: '/all_progresses' }
                     ]}
                   >
-                    目標管理
+                    進捗管理
                   </Dropdown>
                 </div>
                 <div className='px-2 py-2'>

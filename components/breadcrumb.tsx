@@ -123,9 +123,14 @@ export default function Breadcrumb() {
     case '/all_progresses':
       settings.push({ label: '全体進捗状況', path: '/all_progresses' });
       break;
+    case '/client_progresses':
+      settings.push({ label: '全体進捗状況', path: '/all_progresses' });
+      settings.push({ label: '個社別進捗状況', path: '/client_progresses' });
+      break;
     case '/individual_progresses':
       settings.push({ label: '全体進捗状況', path: '/all_progresses' });
-      settings.push({ label: '個社別進捗状況', path: '/individual_progresses' });
+      settings.push({ label: '個社別進捗状況', path: '/client_progresses' });
+      settings.push({ label: '担当者別進捗状況', path: '/individual_progresses' });
       break;
     case '/master_companies':
       settings.push({ label: '関与先一覧', path: '/master_companies' });
@@ -162,7 +167,7 @@ export default function Breadcrumb() {
 
   return (
     <>
-      <ol className="flex items-center whitespace-nowrap p-2 bg-gray-200">
+      <ol className="flex items-center whitespace-nowrap p-2 text-base bg-indigo-200">
         {settings.map(({ label, path }, index) => (
           index < settings.length - 1 ?
             <li className="inline-flex items-center" key={label}>

@@ -45,7 +45,6 @@ export default function DailyReportDetail() {
       <div className="mt-2 inline-flex gap-x-2">
         <Button color="blue" onClick={onClickFiler}>絞り込み</Button>
         <Button color="gray" onClick={onClickReset}>リセット</Button>
-        <Button color="blue" onClick={onClickNew}>新規作成</Button>
       </div>
 
       <div className="mt-4">
@@ -74,6 +73,10 @@ export default function DailyReportDetail() {
         <div className="mt-2">
           <Pagination />
         </div>
+      </div>
+
+      <div className="mt-2 inline-flex gap-x-2">
+        <Button color="blue" onClick={onClickNew}>新規作成</Button>
       </div>
     </div>
   );
