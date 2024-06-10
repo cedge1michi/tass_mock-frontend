@@ -3,6 +3,8 @@ import Anchor from "@/components/anchor";
 import Breadcrumb from "@/components/breadcrumb";
 import Button from "@/components/button";
 import InputDate from "@/components/input_date";
+import InputDatetime from "@/components/input_datetime";
+import InputSelect from "@/components/input_select";
 import InputText from "@/components/input_text";
 import Pagination from "@/components/paginaton";
 import { MouseEvent } from "react";
@@ -24,24 +26,44 @@ export default function DailyReport() {
       <div className="">
         <div className="grid grid-cols-12 gap-2">
           <div className="col-span-6 lg:col-span-2">
-            <label htmlFor="report_date" className="block mb-1">開始日</label>
-            <InputDate id="report_date" />
+            <label htmlFor="report_date" className="block mb-1">開始日時</label>
+            <InputDatetime id="report_date" />
           </div>
           <div className="col-span-6 lg:col-span-2">
-            <label htmlFor="report_date" className="block mb-1">終了日</label>
-            <InputDate id="report_date" />
+            <label htmlFor="report_date" className="block mb-1">終了日時</label>
+            <InputDatetime id="report_date" />
           </div>
-          <div className="col-span-full lg:col-span-3">
+          <div className="col-span-full lg:col-span-6">
             <label htmlFor="job_name" className="block mb-1">業務名</label>
             <InputText id="job_name" />
           </div>
-          <div className="col-span-6 lg:col-span-3">
-            <label htmlFor="company" className="block mb-1">関与先</label>
-            <InputText id="company" />
+          <div className="col-span-3 lg:col-span-4">
+            <label htmlFor="reporter" className="block mb-1">関与先/業務内容</label>
+            <InputSelect
+              id="description"
+              items={[
+                { label: '全て', value: '0' },
+                { label: '選択肢', value: '1' },
+                { label: '選択肢', value: '2' },
+                { label: '選択肢', value: '3' },
+                { label: '選択肢', value: '4' },
+                { label: '選択肢', value: '5' }
+              ]}
+            />
           </div>
-          <div className="col-span-6 lg:col-span-2">
+          <div className="col-span-3 lg:col-span-4">
             <label htmlFor="reporter" className="block mb-1">作成者</label>
-            <InputText id="reporter" />
+            <InputSelect
+              id="description"
+              items={[
+                { label: '全て', value: '0' },
+                { label: '選択肢', value: '1' },
+                { label: '選択肢', value: '2' },
+                { label: '選択肢', value: '3' },
+                { label: '選択肢', value: '4' },
+                { label: '選択肢', value: '5' }
+              ]}
+            />
           </div>
         </div>
 
@@ -58,7 +80,7 @@ export default function DailyReport() {
                 <th className="border p-2">開始日時</th>
                 <th className="border p-2">終了日時</th>
                 <th className="border p-2">業務名</th>
-                <th className="border p-2">関与先</th>
+                <th className="border p-2">関与先/業務内容</th>
                 <th className="border p-2">作成者</th>
               </tr>
             </thead>
@@ -74,7 +96,7 @@ export default function DailyReport() {
                   <Anchor href="/daily_report_bodies/edit">サンプル</Anchor>
                 </td>
                 <td className="border p-2">
-                  支援サービス株式会社
+                  支援サービス株式会社/〇〇業務 2024/04-2025/03
                 </td>
                 <td className="border p-2">
                   支援　太郎

@@ -128,9 +128,18 @@ export default function Breadcrumb() {
       settings.push({ label: '個社別進捗状況', path: '/client_progresses' });
       break;
     case '/individual_progresses':
-      settings.push({ label: '全体進捗状況', path: '/all_progresses' });
-      settings.push({ label: '個社別進捗状況', path: '/client_progresses' });
       settings.push({ label: '担当者別進捗状況', path: '/individual_progresses' });
+      break;
+    case '/master_users':
+      settings.push({ label: 'ユーザー一覧', path: '/master_users' });
+      break;
+    case '/master_users/new':
+      settings.push({ label: 'ユーザー一覧', path: '/master_users' });
+      settings.push({ label: 'ユーザー作成', path: '/master_users/new' });
+      break;
+    case '/master_users/edit':
+      settings.push({ label: 'ユーザー一覧', path: '/master_users' });
+      settings.push({ label: 'ユーザー編集', path: '/master_users/edit' });
       break;
     case '/master_companies':
       settings.push({ label: '関与先一覧', path: '/master_companies' });

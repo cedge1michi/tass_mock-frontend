@@ -64,8 +64,8 @@ export default function DailyReport() {
           <InputText id="company" />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="process_date" className="block mb-1">期限</label>
-          <InputDatetime id="process_date" />
+          <label htmlFor="process_date" className="block mb-1">締切</label>
+          <InputDate id="process_date" />
         </div>
         <div className="col-span-full">
           <label htmlFor="memo" className="block mb-1">内容</label>

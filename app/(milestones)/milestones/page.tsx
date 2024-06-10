@@ -10,11 +10,13 @@ import DatePicker, { registerLocale } from 'react-datepicker';
 import { Locale, ja } from 'date-fns/locale';  // date-fns から日本語ロケールをインポート
 import "react-datepicker/dist/react-datepicker.css";
 import { calculateOverrideValues } from "next/dist/server/font-utils";
+import InputSelect from "@/components/input_select";
 
 registerLocale('ja', ja as Locale);  // 日本語ロケールを登録
 
 export default function DailyReportDetail() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date("2024/4/1"));
+  const [endDate, setEndDate] = useState(new Date("2025/3/31"));
 
   const onClickFiler = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
@@ -33,7 +35,7 @@ export default function DailyReportDetail() {
           <label htmlFor="company" className="block mb-1">開始年月</label>
           <DatePicker
             selected={startDate}
-            onChange={(date: Date) => setStartDate(date)}
+            onChange={(date: Date) => setStartDate(new Date())}
             dateFormat="yyyy/MM"  // 日付の形式を yyyy/MM に設定
             showMonthYearPicker
             showFullMonthYearPicker
@@ -44,8 +46,8 @@ export default function DailyReportDetail() {
         <div className="col-span-full lg:col-span-1">
           <label htmlFor="company" className="block mb-1">終了年月</label>
           <DatePicker
-            selected={startDate}
-            onChange={(date: Date) => setStartDate(date)}
+            selected={endDate}
+            onChange={(date: Date) => setEndDate(new Date())}
             dateFormat="yyyy/MM"  // 日付の形式を yyyy/MM に設定
             showMonthYearPicker
             showFullMonthYearPicker
@@ -53,10 +55,18 @@ export default function DailyReportDetail() {
             className="rounded-lg border-gray-300 w-full"
           />
         </div>
-        <div className="col-span-full lg:col-span-10">
-          <label htmlFor="company" className="block mb-1">関与先</label>
-          <InputText
+        <div className="col-span-3 lg:col-span-4">
+          <label htmlFor="reporter" className="block mb-1">関与先</label>
+          <InputSelect
             id="description"
+            items={[
+              { label: '全て', value: '0' },
+              { label: '選択肢', value: '1' },
+              { label: '選択肢', value: '2' },
+              { label: '選択肢', value: '3' },
+              { label: '選択肢', value: '4' },
+              { label: '選択肢', value: '5' }
+            ]}
           />
         </div>
       </div>
@@ -72,7 +82,7 @@ export default function DailyReportDetail() {
             <tr className="bg-gray-100">
               <th className="border p-2">開始年月</th>
               <th className="border p-2">終了年月</th>
-              <th className="border p-2">関与先</th>
+              <th className="border p-2">関与先/業務内容</th>
               <th className="border p-2">報酬</th>
               <th className="border p-2">計画時間</th>
               <th className="border p-2">コスト</th>
@@ -88,7 +98,12 @@ export default function DailyReportDetail() {
                 2024/03
               </td>
               <td className="border p-2">
-                <Anchor href="/milestones/edit">間接業務</Anchor>
+                <div className="flex items-center justify-between w-full focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
+                  間接業務
+                  <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                  </svg>
+                </div>
               </td>
               <td className="border p-2">
                 1,000,000
@@ -103,6 +118,53 @@ export default function DailyReportDetail() {
                 999,999
               </td>
             </tr>
+            <tr className="bg-yellow-50">
+              <td className="border p-2">
+                2023/04
+              </td>
+              <td className="border p-2">
+                2024/03
+              </td>
+              <td className="border p-2">
+                <Anchor href="/milestones/edit">営業会議</Anchor>
+              </td>
+              <td className="border p-2">
+                300,000
+              </td>
+              <td className="border p-2">
+                40
+              </td>
+              <td className="border p-2">
+                999,999
+              </td>
+              <td className="border p-2">
+                999,999
+              </td>
+            </tr>
+            <tr className="bg-yellow-50">
+              <td className="border p-2">
+                2023/04
+              </td>
+              <td className="border p-2">
+                2024/03
+              </td>
+              <td className="border p-2">
+                <Anchor href="/milestones/edit">チーム会議</Anchor>
+              </td>
+              <td className="border p-2">
+                700,000
+              </td>
+              <td className="border p-2">
+                80
+              </td>
+              <td className="border p-2">
+                999,999
+              </td>
+              <td className="border p-2">
+                999,999
+              </td>
+            </tr>
+
           </tbody>
         </table>
         <div className="mt-2">

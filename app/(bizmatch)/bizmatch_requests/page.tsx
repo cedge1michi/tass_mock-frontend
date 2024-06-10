@@ -55,11 +55,11 @@ export default function DailyReportDetail() {
           <InputText id="reporter" />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="report_date" className="block mb-1">期限開始</label>
+          <label htmlFor="report_date" className="block mb-1">締切開始</label>
           <InputDate id="report_date" />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="report_date" className="block mb-1">期限終了</label>
+          <label htmlFor="report_date" className="block mb-1">締切終了</label>
           <InputDate id="report_date" />
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function DailyReportDetail() {
               <th className="border p-2">カテゴリー</th>
               <th className="border p-2">タイトル</th>
               <th className="border p-2">予算</th>
-              <th className="border p-2">期限</th>
+              <th className="border p-2">締切</th>
             </tr>
           </thead>
           <tbody>
@@ -98,7 +98,7 @@ export default function DailyReportDetail() {
                 10,000
               </td>
               <td className="border p-2">
-                2024-02-05 18:00
+                2024-02-05
               </td>
             </tr>
           </tbody>

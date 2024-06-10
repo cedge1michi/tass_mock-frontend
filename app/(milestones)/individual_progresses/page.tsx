@@ -10,6 +10,7 @@ import DatePicker, { registerLocale } from 'react-datepicker';
 import { Locale, ja } from 'date-fns/locale';  // date-fns から日本語ロケールをインポート
 import "react-datepicker/dist/react-datepicker.css";
 import { calculateOverrideValues } from "next/dist/server/font-utils";
+import InputSelect from "@/components/input_select";
 
 export default function DailyReport() {
   const [startDate, setStartDate] = useState(new Date());
@@ -29,39 +30,34 @@ export default function DailyReport() {
     <div>
       <div className="">
         <div className="grid grid-cols-12 gap-2">
-          <div className="col-span-full lg:col-span-1">
-            <label htmlFor="company" className="block mb-1">開始年月</label>
-            <DatePicker
-              selected={startDate}
-              onChange={(date: Date) => setStartDate(date)}
-              dateFormat="yyyy/MM"  // 日付の形式を yyyy/MM に設定
-              showMonthYearPicker
-              showFullMonthYearPicker
-              locale="ja"  // DatePicker のロケールを日本語に設定
-              className="rounded-lg border-gray-300 bg-gray-100 w-full"
+          <div className="col-span-3 lg:col-span-4">
+            <label htmlFor="reporter" className="block mb-1">担当者</label>
+            <InputSelect
+              id="description"
+              items={[
+                { label: '支援　一郎', value: '0' },
+                { label: '選択肢', value: '1' },
+                { label: '選択肢', value: '2' },
+                { label: '選択肢', value: '3' },
+                { label: '選択肢', value: '4' },
+                { label: '選択肢', value: '5' }
+              ]}
               disabled
             />
           </div>
-          <div className="col-span-full lg:col-span-1">
-            <label htmlFor="company" className="block mb-1">終了年月</label>
-            <DatePicker
-              selected={startDate}
-              onChange={(date: Date) => setStartDate(date)}
-              dateFormat="yyyy/MM"  // 日付の形式を yyyy/MM に設定
-              showMonthYearPicker
-              showFullMonthYearPicker
-              locale="ja"  // DatePicker のロケールを日本語に設定
-              className="rounded-lg border-gray-300 bg-gray-100 w-full"
-              disabled
+          <div className="col-span-3 lg:col-span-4">
+            <label htmlFor="reporter" className="block mb-1">関与先/業務内容</label>
+            <InputSelect
+              id="description"
+              items={[
+                { label: '全て', value: '0' },
+                { label: '選択肢', value: '1' },
+                { label: '選択肢', value: '2' },
+                { label: '選択肢', value: '3' },
+                { label: '選択肢', value: '4' },
+                { label: '選択肢', value: '5' }
+              ]}
             />
-          </div>
-          <div className="col-span-6 lg:col-span-6">
-            <label htmlFor="job_name" className="block mb-1">担当者</label>
-            <InputText id="job_name" disabled />
-          </div>
-          <div className="col-span-6 lg:col-span-4">
-            <label htmlFor="job_name" className="block mb-1">関与先</label>
-            <InputText id="job_name" />
           </div>
         </div>
 
@@ -74,12 +70,9 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border p-2">契約報酬</th>
                 <th className="border p-2">目標時間</th>
-                <th className="border p-2">消費報酬</th>
                 <th className="border p-2">消費時間</th>
                 <th className="border p-2">進捗率</th>
-                <th className="border p-2">残報酬</th>
                 <th className="border p-2">残時間</th>
               </tr>
             </thead>
@@ -92,16 +85,7 @@ export default function DailyReport() {
                   999
                 </td>
                 <td className="border p-2">
-                  999
-                </td>
-                <td className="border p-2">
-                  999
-                </td>
-                <td className="border p-2">
                   100%
-                </td>
-                <td className="border p-2">
-                  999
                 </td>
                 <td className="border p-2">
                   999
@@ -115,26 +99,17 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border p-2">関与先</th>
-                <th className="border p-2">契約報酬</th>
+                <th className="border p-2">関与先/業務内容</th>
                 <th className="border p-2">目標時間</th>
-                <th className="border p-2">消費報酬</th>
                 <th className="border p-2">消費時間</th>
                 <th className="border p-2">進捗率</th>
-                <th className="border p-2">残報酬</th>
                 <th className="border p-2">残時間</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="border p-2">
-                  間接業務
-                </td>
-                <td className="border p-2">
-                  999
-                </td>
-                <td className="border p-2">
-                  999
+                  間接業務/営業会議 2024/04-2025/03
                 </td>
                 <td className="border p-2">
                   999
@@ -148,9 +123,6 @@ export default function DailyReport() {
                 <td className="border p-2">
                   999
                 </td>
-                <td className="border p-2">
-                  999
-                </td>
               </tr>
             </tbody>
           </table>
@@ -160,30 +132,39 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border p-2">年月</th>
-                <th className="border p-2">報酬</th>
+                <th className="border p-2">年月/関与先/業務内容</th>
                 <th className="border p-2">時間</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border p-2">2024/04(Accordion: Summary)</td>
+                <td className="border p-2">
+                  <div className="flex items-center justify-between w-full focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
+                    2024/04
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                    </svg>
+                  </div>
+                </td>
                 <td className="border p-2">999</td>
+              </tr>
+              <tr className="bg-yellow-50">
+                <td className="border p-2">間接業務/営業会議 2024/04-2025/03</td>
                 <td className="border p-2">999</td>
               </tr>
               <tr>
-                <td className="border p-2">間接業務(Detail)</td>
-                <td className="border p-2">999</td>
+                <td className="border p-2">
+                  <div className="flex items-center justify-between w-full focus:ring-4 focus:ring-gray-200 hover:bg-gray-100">
+                    2024/05
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
+                    </svg>
+                  </div>
+                </td>
                 <td className="border p-2">999</td>
               </tr>
-              <tr>
-                <td className="border p-2">2024/05(Accordion: Summary)</td>
-                <td className="border p-2">999</td>
-                <td className="border p-2">999</td>
-              </tr>
-              <tr>
-                <td className="border p-2">間接業務(Detail)</td>
-                <td className="border p-2">999</td>
+              <tr className="bg-yellow-50">
+                <td className="border p-2">間接業務/営業会議 2024/04-2025/03</td>
                 <td className="border p-2">999</td>
               </tr>
             </tbody>

@@ -3,6 +3,7 @@ import Anchor from "@/components/anchor";
 import Breadcrumb from "@/components/breadcrumb";
 import Button from "@/components/button";
 import InputDate from "@/components/input_date";
+import InputDatetime from "@/components/input_datetime";
 import InputSelect from "@/components/input_select";
 import InputText from "@/components/input_text";
 import Pagination from "@/components/paginaton";
@@ -56,11 +57,11 @@ export default function DailyReportDetail() {
         </div>
         <div className="col-span-6 lg:col-span-2">
           <label htmlFor="report_date" className="block mb-1">応募開始</label>
-          <InputDate id="report_date" />
+          <InputDatetime id="report_date" />
         </div>
         <div className="col-span-6 lg:col-span-2">
           <label htmlFor="report_date" className="block mb-1">応募終了</label>
-          <InputDate id="report_date" />
+          <InputDatetime id="report_date" />
         </div>
       </div>
 

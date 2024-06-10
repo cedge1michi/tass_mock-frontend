@@ -14,14 +14,14 @@
 業務日報編集 --> 業務日報明細作成: 明細追加ボタン
 業務日報明細作成 --> 業務日報編集: 作成／戻るボタン
 
-業務日報一覧 --> 業務日報一覧: F/R/S/P
+業務日報一覧 --> 業務日報一覧: F/R/P
 
 [*] --> 業務日報明細一覧: 業務日報明細一覧メニュー
 
 業務日報明細一覧 --> 業務日報明細編集_drb: 業務日報明細リスト
 業務日報明細編集_drb --> 業務日報明細一覧: 変更／削除／戻るボタン
 
-業務日報明細一覧 --> 業務日報明細一覧: F/R/S/P
+業務日報明細一覧 --> 業務日報明細一覧: F/R/P
 
 業務日報一覧: daily_report_heads
 対象日選択: daily_report_heads/date
@@ -31,5 +31,5 @@
 業務日報明細編集_drb: daily_report_bodies/edit_drb
 業務日報明細作成: daily_report_bodies/new
 
-note "F/R/S/P: Filter/Reset/Sort/Pager" as Note1
+note "F/R/P: Filter/Reset/Pager" as Note1
 @enduml

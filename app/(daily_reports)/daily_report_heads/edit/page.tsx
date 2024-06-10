@@ -3,6 +3,7 @@ import Anchor from "@/components/anchor";
 import Breadcrumb from "@/components/breadcrumb";
 import Button from "@/components/button";
 import InputDate from "@/components/input_date";
+import InputSelect from "@/components/input_select";
 import InputText from "@/components/input_text";
 import InputTextArea from "@/components/input_textarea";
 import Pagination from "@/components/paginaton";
@@ -31,9 +32,20 @@ export default function DailyReport() {
           <label htmlFor="report_date" className="block mb-1">報告日</label>
           <InputDate id="report_date" disabled />
         </div>
-        <div className="col-span-6 lg:col-span-3">
+        <div className="col-span-3 lg:col-span-4">
           <label htmlFor="reporter" className="block mb-1">作成者</label>
-          <InputText id="reporter" disabled />
+          <InputSelect
+            id="description"
+            items={[
+              { label: '支援　一郎', value: '0' },
+              { label: '選択肢', value: '1' },
+              { label: '選択肢', value: '2' },
+              { label: '選択肢', value: '3' },
+              { label: '選択肢', value: '4' },
+              { label: '選択肢', value: '5' }
+            ]}
+            disabled
+          />
         </div>
         <div className="col-span-full">
           <label htmlFor="report_content" className="block mb-1">業務内容</label>
@@ -54,7 +66,7 @@ export default function DailyReport() {
               <th className="border p-2">開始日時</th>
               <th className="border p-2">終了日時</th>
               <th className="border p-2">業務名</th>
-              <th className="border p-2">関与先</th>
+              <th className="border p-2">関与先/業務内容</th>
             </tr>
           </thead>
           <tbody>
@@ -69,7 +81,7 @@ export default function DailyReport() {
                 <Anchor href="/daily_report_bodies/edit">サンプル</Anchor>
               </td>
               <td className="border p-2">
-                支援サービス株式会社
+                支援サービス株式会社/〇〇業務 2024/04-2025/03
               </td>
             </tr>
           </tbody>

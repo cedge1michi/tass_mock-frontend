@@ -80,8 +80,8 @@ export default function DailyReport() {
           <InputText id="company" disabled />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="process_date" className="block mb-1">期限</label>
-          <InputDatetime id="process_date" disabled />
+          <label htmlFor="process_date" className="block mb-1">締切</label>
+          <InputDate id="process_date" disabled />
         </div>
         <div className="col-span-3 lg:col-span-2">
           <label htmlFor="company" className="block mb-1">依頼者</label>

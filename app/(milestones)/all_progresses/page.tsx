@@ -10,9 +10,11 @@ import DatePicker, { registerLocale } from 'react-datepicker';
 import { Locale, ja } from 'date-fns/locale';  // date-fns から日本語ロケールをインポート
 import "react-datepicker/dist/react-datepicker.css";
 import { calculateOverrideValues } from "next/dist/server/font-utils";
+import InputSelect from "@/components/input_select";
 
 export default function DailyReport() {
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date("2024/4/1"));
+  const [endDate, setEndDate] = useState(new Date("2025/3/31"));
 
   const onClickFiler = (event: MouseEvent<HTMLButtonElement>) => {
     // 絞り込みのロジックをここに実装
@@ -44,8 +46,8 @@ export default function DailyReport() {
           <div className="col-span-full lg:col-span-1">
             <label htmlFor="company" className="block mb-1">終了年月</label>
             <DatePicker
-              selected={startDate}
-              onChange={(date: Date) => setStartDate(date)}
+              selected={endDate}
+              onChange={(date: Date) => setEndDate(date)}
               dateFormat="yyyy/MM"  // 日付の形式を yyyy/MM に設定
               showMonthYearPicker
               showFullMonthYearPicker
@@ -53,9 +55,19 @@ export default function DailyReport() {
               className="rounded-lg border-gray-300 w-full"
             />
           </div>
-          <div className="col-span-6 lg:col-span-10">
-            <label htmlFor="job_name" className="block mb-1">関与先</label>
-            <InputText id="job_name" />
+          <div className="col-span-3 lg:col-span-4">
+            <label htmlFor="reporter" className="block mb-1">関与先</label>
+            <InputSelect
+              id="description"
+              items={[
+                { label: '全て', value: '0' },
+                { label: '選択肢', value: '1' },
+                { label: '選択肢', value: '2' },
+                { label: '選択肢', value: '3' },
+                { label: '選択肢', value: '4' },
+                { label: '選択肢', value: '5' }
+              ]}
+            />
           </div>
         </div>
 
@@ -109,7 +121,7 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border p-2">関与先</th>
+                <th className="border p-2">関与先/業務内容</th>
                 <th className="border p-2">契約報酬</th>
                 <th className="border p-2">目標時間</th>
                 <th className="border p-2">消費報酬</th>
@@ -122,7 +134,7 @@ export default function DailyReport() {
             <tbody>
               <tr>
                 <td className="border p-2">
-                  <Anchor href="/client_progresses">支援サービス株式会社</Anchor>
+                  <Anchor href="/client_progresses">間接業務/営業会議 2024/04-2025/03</Anchor>
                 </td>
                 <td className="border p-2">
                   999

@@ -77,7 +77,8 @@ export default function Header() {
                   <Dropdown
                     items={[
                       { label: '目標一覧', url: '/milestones' },
-                      { label: '全体進捗状況', url: '/all_progresses' }
+                      { label: '全体進捗状況', url: '/all_progresses' },
+                      { label: '担当者別進捗状況', url: '/individual_progresses' },
                     ]}
                   >
                     進捗管理
@@ -96,9 +97,9 @@ export default function Header() {
                 <div className='px-2 py-2'>
                   <Dropdown
                     items={[
-                      { label: '関与先一覧', url: '/master_companies' },
-                      { label: '税理士一覧', url: '/master_taxaccountants' },
                       { label: 'グループ一覧', url: '/master_groups' },
+                      { label: 'ユーザー一覧', url: '/master_users' },
+                      { label: '関与先一覧', url: '/master_companies' },
                       { label: 'システム管理', url: '/admin' }
                     ]}
                   >
