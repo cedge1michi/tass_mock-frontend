@@ -114,16 +114,16 @@ export default function DailyReport() {
         <div className="col-span-full lg:col-span-6">
         </div>
         <div className="col-span-3 lg:col-span-2">
+          <label htmlFor="company" className="block mb-1">検収予定日</label>
+          <InputDate id="company" />
+        </div>
+        <div className="col-span-3 lg:col-span-2">
           <label htmlFor="company" className="block mb-1">発注者</label>
           <InputText id="company" disabled />
         </div>
         <div className="col-span-3 lg:col-span-2">
           <label htmlFor="company" className="block mb-1">発注日時</label>
           <InputDatetime id="company" disabled />
-        </div>
-        <div className="col-span-3 lg:col-span-2">
-          <label htmlFor="company" className="block mb-1">検収予定日</label>
-          <InputDate id="company" disabled />
         </div>
         <div className="col-span-3 lg:col-span-2">
           <label htmlFor="company" className="block mb-1">受注者</label>
@@ -139,8 +139,7 @@ export default function DailyReport() {
         <Button color="blue" onClick={onClickOrder}>変更</Button>
         <Button color="blue" onClick={onClickOrder}>発注</Button>
         <Button color="blue" onClick={onClickOrder}>受注</Button>
-        <Button color="red" onClick={onClickOrder}>辞退</Button>
-        <Button color="red" onClick={onClickOrder}>取消</Button>
+        <Button color="red" onClick={onClickOrder}>受注辞退</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
 
