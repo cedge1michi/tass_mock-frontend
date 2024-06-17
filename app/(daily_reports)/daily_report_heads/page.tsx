@@ -18,6 +18,9 @@ export default function DailyReportDetail() {
   const onClickDate = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/daily_report_heads/date';
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/daily_report_heads/edit';
+  };
   const onClickNew = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/daily_report_heads/new';
   };
@@ -34,7 +37,7 @@ export default function DailyReportDetail() {
           <InputDate id="report_date" />
         </div>
         <div className="col-span-full lg:col-span-4">
-          <label htmlFor="report_content" className="block mb-1">報告内容</label>
+          <label htmlFor="report_content" className="block mb-1">業務日報</label>
           <InputText id="report_content" />
         </div>
         <div className="col-span-3 lg:col-span-4">
@@ -62,15 +65,47 @@ export default function DailyReportDetail() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">報告日</th>
-              <th className="border p-2">報告内容</th>
+              <th className="border p-2">業務日報</th>
               <th className="border p-2">作成者</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
-                <Anchor href="/daily_report_heads/edit">2024-02-05</Anchor>
+                2024-02-05
+              </td>
+              <td className="border p-2">
+                サンプル
+              </td>
+              <td className="border p-2">
+                支援　太郎
+              </td>
+            </tr>
+            <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
+              <td className="border p-2">
+                2024-02-06
+              </td>
+              <td className="border p-2">
+                サンプル
+              </td>
+              <td className="border p-2">
+                支援　太郎
+              </td>
+            </tr>
+            <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
+              <td className="border p-2">
+                2024-02-07
               </td>
               <td className="border p-2">
                 サンプル

@@ -23,6 +23,9 @@ export default function DailyReport() {
     // 絞り込みのロジックをここに実装
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/individual_progresses';
+  };
   const onClickAdd = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/daily_report_bodies/new';
   }
@@ -111,6 +114,7 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
+                <th className="border p-2">操作</th>
                 <th className="border p-2">担当者</th>
                 <th className="border p-2">契約報酬</th>
                 <th className="border p-2">目標時間</th>
@@ -123,10 +127,11 @@ export default function DailyReport() {
             </thead>
             <tbody>
               <tr>
+                <td className="border p-2 w-20">
+                  <Button color="green" onClick={onClickUpdate}>詳細</Button>
+                </td>
                 <td className="border p-2">
-                  <Anchor href="/individual_progresses">
-                    支援　一郎
-                  </Anchor>
+                  支援　一郎
                 </td>
                 <td className="border p-2">
                   999
@@ -151,10 +156,11 @@ export default function DailyReport() {
                 </td>
               </tr>
               <tr>
+                <td className="border p-2 w-20">
+                  <Button color="green" onClick={onClickUpdate}>詳細</Button>
+                </td>
                 <td className="border p-2">
-                  <Anchor href="/individual_progresses">
-                    支援　二郎
-                  </Anchor>
+                  支援　二郎
                 </td>
                 <td className="border p-2">
                   999
@@ -242,6 +248,7 @@ export default function DailyReport() {
 
         <div className="mt-2 inline-flex gap-x-2">
           <Button color="blue" onClick={onClickAdd}>CSV出力</Button>
+          <Button color="gray" onClick={onClickAdd}>戻る</Button>
         </div>
       </div>
     </div>

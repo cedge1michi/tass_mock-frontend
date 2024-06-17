@@ -16,8 +16,11 @@ export default function DailyReportDetail() {
   const onClickReset = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/bizmatch_deals/edit';
+  };
   const onClickNew = (event: MouseEvent<HTMLButtonElement>) => {
-    window.location.href = '/bizmatch_requests/new';
+    window.location.href = '/bizmatch_deals/new';
   };
 
   return (
@@ -74,6 +77,7 @@ export default function DailyReportDetail() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">状態</th>
               <th className="border p-2">種別</th>
               <th className="border p-2">カテゴリー</th>
@@ -87,6 +91,9 @@ export default function DailyReportDetail() {
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 応募
               </td>
@@ -97,7 +104,7 @@ export default function DailyReportDetail() {
                 公式文書二重チェック
               </td>
               <td className="border p-2">
-                <Anchor href="/bizmatch_deals/edit">〇〇申請書確認依頼</Anchor>
+                〇〇申請書確認依頼
               </td>
               <td className="border p-2">
                 10,000

@@ -15,6 +15,9 @@ export default function DailyReportDetail() {
   const onClickReset = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/bizmatch_requests/edit';
+  };
   const onClickNew = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/bizmatch_requests/new';
   };
@@ -73,6 +76,7 @@ export default function DailyReportDetail() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">種別</th>
               <th className="border p-2">カテゴリー</th>
               <th className="border p-2">タイトル</th>
@@ -82,6 +86,9 @@ export default function DailyReportDetail() {
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 委託
               </td>
@@ -90,7 +97,7 @@ export default function DailyReportDetail() {
               </td>
               <td className="border p-2">
                 <div className="inline-flex items-center">
-                  <Anchor href="/bizmatch_requests/edit">〇〇申請書確認依頼</Anchor>
+                  〇〇申請書確認依頼
                   <span className="ml-1 px-1 pb-[2px] text-xs text-gray-100 rounded-lg bg-orange-500">New</span>
                 </div>
               </td>

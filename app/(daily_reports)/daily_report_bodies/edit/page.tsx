@@ -9,8 +9,9 @@ import InputFile from "@/components/input_file";
 import InputSelect from "@/components/input_select";
 import InputText from "@/components/input_text";
 import InputTextArea from "@/components/input_textarea";
+import DatePicker, { registerLocale } from 'react-datepicker';
 import Pagination from "@/components/paginaton";
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 function get_path(url: string) {
   let pos = url.indexOf(':');
@@ -21,6 +22,9 @@ function get_path(url: string) {
 }
 
 export default function DailyReport() {
+  const [startDate, setStartDate] = useState(new Date("2024/4/1"));
+  const [endDate, setEndDate] = useState(new Date("2025/3/31"));
+
   const referrer = get_path(document.referrer);
   console.info(referrer);
 
@@ -56,7 +60,7 @@ export default function DailyReport() {
           />
         </div>
         <div className="col-span-full">
-          <label htmlFor="report_content" className="block mb-1">業務内容</label>
+          <label htmlFor="report_content" className="block mb-1">業務日報</label>
           <InputTextArea id="report_content" rows={3} disabled />
         </div>
 
@@ -110,29 +114,15 @@ export default function DailyReport() {
           <InputText id="company" />
         </div>
         <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="target_year" className="block mb-1">対象年度</label>
-          <InputSelect
-            id="target_year"
-            items={[
-              { label: '令和５年度', value: '1' },
-              { label: '選択肢', value: '2' },
-              { label: '選択肢', value: '3' },
-              { label: '選択肢', value: '4' },
-              { label: '選択肢', value: '5' }
-            ]}
-          />
-        </div>
-        <div className="col-span-6 lg:col-span-2">
-          <label htmlFor="target_month" className="block mb-1">対象年月</label>
-          <InputSelect
-            id="target_month"
-            items={[
-              { label: '４月度', value: '1' },
-              { label: '選択肢', value: '2' },
-              { label: '選択肢', value: '3' },
-              { label: '選択肢', value: '4' },
-              { label: '選択肢', value: '5' }
-            ]}
+          <label htmlFor="company" className="block mb-1">対象年度</label>
+          <DatePicker
+            selected={startDate}
+            onChange={(date: Date) => setStartDate(new Date())}
+            dateFormat="yyyy/MM"  // 日付の形式を yyyy/MM に設定
+            showMonthYearPicker
+            showFullMonthYearPicker
+            locale="ja"  // DatePicker のロケールを日本語に設定
+            className="rounded-lg border-gray-300 w-full"
           />
         </div>
         <div className="col-span-6 lg:col-span-3">
@@ -175,7 +165,8 @@ export default function DailyReport() {
       </div>
 
       <div className="mt-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickFiler}>変更</Button>
+        <Button color="blue" onClick={onClickFiler}>保存</Button>
+        <Button color="red" onClick={onClickFiler}>削除</Button>
         <Button color="gray" onClick={onClickReset}>戻る</Button>
       </div>
     </div>

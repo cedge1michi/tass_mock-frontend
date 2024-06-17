@@ -21,6 +21,9 @@ export default function DailyReport() {
     // ロジックをここに実装
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/daily_report_bodies/edit';
+  };
   const onClickAdd = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/daily_report_bodies/new';
   };
@@ -48,13 +51,13 @@ export default function DailyReport() {
           />
         </div>
         <div className="col-span-full">
-          <label htmlFor="report_content" className="block mb-1">業務内容</label>
+          <label htmlFor="report_content" className="block mb-1">業務日報</label>
           <InputTextArea id="report_content" rows={3} />
         </div>
       </div>
 
       <div className="mt-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickEdit}>変更</Button>
+        <Button color="blue" onClick={onClickEdit}>保存</Button>
         <Button color="red" onClick={onClickDelete}>削除</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
@@ -63,6 +66,7 @@ export default function DailyReport() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">開始日時</th>
               <th className="border p-2">終了日時</th>
               <th className="border p-2">業務名</th>
@@ -71,6 +75,9 @@ export default function DailyReport() {
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 2024-02-05 10:00:00
               </td>
@@ -78,7 +85,7 @@ export default function DailyReport() {
                 2024-02-05 12:00:00
               </td>
               <td className="border p-2">
-                <Anchor href="/daily_report_bodies/edit">サンプル</Anchor>
+                サンプル
               </td>
               <td className="border p-2">
                 支援サービス株式会社/〇〇業務 2024/04-2025/03

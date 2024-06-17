@@ -136,10 +136,11 @@ export default function DailyReport() {
       </div>
 
       <div className="mt-4 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickOrder}>変更</Button>
+        <Button color="blue" onClick={onClickOrder}>保存</Button>
         <Button color="blue" onClick={onClickOrder}>発注</Button>
         <Button color="blue" onClick={onClickOrder}>受注</Button>
         <Button color="red" onClick={onClickOrder}>受注辞退</Button>
+        <Button color="blue" onClick={onClickOrder}>完了</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
 

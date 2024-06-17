@@ -86,7 +86,7 @@ export default function DailyReport() {
       </div>
 
       <div className="my-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickEdit}>変更</Button>
+        <Button color="blue" onClick={onClickEdit}>保存</Button>
         <Button color="blue" onClick={onClickEdit}>応募</Button>
         <Button color="red" onClick={onClickEdit}>削除</Button>
         <Button color="gray" onClick={onClickBack}>戻る</Button>

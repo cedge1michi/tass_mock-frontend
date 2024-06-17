@@ -18,6 +18,9 @@ export default function DailyReport() {
     // 絞り込みのロジックをここに実装
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/daily_report_bodies/edit';
+  };
   const onClickAdd = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/daily_report_bodies/new';
   }
@@ -77,6 +80,7 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
+                <th className="border p-2">操作</th>
                 <th className="border p-2">開始日時</th>
                 <th className="border p-2">終了日時</th>
                 <th className="border p-2">業務名</th>
@@ -86,6 +90,9 @@ export default function DailyReport() {
             </thead>
             <tbody>
               <tr>
+                <td className="border p-2 w-20">
+                  <Button color="green" onClick={onClickUpdate}>編集</Button>
+                </td>
                 <td className="border p-2">
                   2024-02-05 10:00:00
                 </td>
@@ -93,7 +100,7 @@ export default function DailyReport() {
                   2024-02-05 12:00:00
                 </td>
                 <td className="border p-2">
-                  <Anchor href="/daily_report_bodies/edit">サンプル</Anchor>
+                  サンプル
                 </td>
                 <td className="border p-2">
                   支援サービス株式会社/〇〇業務 2024/04-2025/03

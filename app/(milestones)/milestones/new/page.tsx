@@ -65,11 +65,6 @@ export default function DailyReport() {
         </div>
       </div>
 
-      <div className="mt-2 inline-flex gap-x-2">
-        <Button color="blue" onClick={onClickEdit}>作成</Button>
-        <Button color="gray" onClick={onClickBack}>戻る</Button>
-      </div>
-
       <div className="mt-4">
         <table className="table-auto w-[100%]">
           <thead>
@@ -102,17 +97,20 @@ export default function DailyReport() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">開始年月</th>
               <th className="border p-2">終了年月</th>
               <th className="border p-2">担当者</th>
               <th className="border p-2">時間単価</th>
               <th className="border p-2">計画時間</th>
               <th className="border p-2">コスト</th>
-              <th className="border p-2">操作</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="red" onClick={onClickEdit}>削除</Button>
+              </td>
               <td className="border p-2 w-40">
                 <DatePicker
                   selected={startDate}
@@ -156,9 +154,6 @@ export default function DailyReport() {
               <td className="border p-2">
                 100,000
               </td>
-              <td className="border p-2 w-20">
-                <Button color="red" onClick={onClickEdit}>削除</Button>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -166,6 +161,8 @@ export default function DailyReport() {
 
       <div className="mt-2 inline-flex gap-x-2">
         <Button color="blue" onClick={onClickEdit}>担当者追加</Button>
+        <Button color="blue" onClick={onClickEdit}>保存</Button>
+        <Button color="gray" onClick={onClickBack}>戻る</Button>
       </div>
     </div >
   );

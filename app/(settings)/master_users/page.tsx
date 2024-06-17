@@ -24,6 +24,9 @@ export default function DailyReportDetail() {
   const onClickReset = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/master_users/edit';
+  };
   const onClickNew = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/master_users/new';
   };
@@ -78,6 +81,7 @@ export default function DailyReportDetail() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">開始日</th>
               <th className="border p-2">開始日</th>
               <th className="border p-2">名称</th>
@@ -88,6 +92,9 @@ export default function DailyReportDetail() {
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 2023/04/01
               </td>
@@ -95,7 +102,7 @@ export default function DailyReportDetail() {
                 2024/03/31
               </td>
               <td className="border p-2">
-                <Anchor href="/master_users/edit">支援　一郎</Anchor>
+                支援　一郎
               </td>
               <td className="border p-2">
                 社員

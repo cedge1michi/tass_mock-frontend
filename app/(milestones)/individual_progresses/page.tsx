@@ -173,6 +173,7 @@ export default function DailyReport() {
 
         <div className="mt-2 inline-flex gap-x-2">
           <Button color="blue" onClick={onClickAdd}>CSV出力</Button>
+          <Button color="gray" onClick={onClickAdd}>戻る</Button>
         </div>
       </div>
     </div>

@@ -14,6 +14,9 @@ export default function DailyReportDetail() {
   const onClickReset = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/activity_reports/edit';
+  };
   const onClickNew = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/activity_reports/new';
   };
@@ -56,6 +59,7 @@ export default function DailyReportDetail() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">業務区分</th>
               <th className="border p-2">委嘱者</th>
               <th className="border p-2">内容</th>
@@ -67,6 +71,9 @@ export default function DailyReportDetail() {
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 税務代理(1号)
               </td>
@@ -74,7 +81,7 @@ export default function DailyReportDetail() {
                 支援サービス株式会社
               </td>
               <td className="border p-2">
-                <Anchor href="/activity_reports/show">所得税確定申告</Anchor>
+                所得税確定申告
               </td>
               <td className="border p-2">
                 申告書作成
@@ -94,6 +101,10 @@ export default function DailyReportDetail() {
         <div className="mt-2">
           <Pagination />
         </div>
+      </div>
+
+      <div className="mt-2 inline-flex gap-x-2">
+        <Button color="blue" onClick={onClickNew}>新規作成</Button>
       </div>
     </div>
   );

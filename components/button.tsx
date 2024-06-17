@@ -5,7 +5,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   color: string;
 };
 
-export default function Button({children, color, ...props}: Props) {
+export default function Button({ children, color, ...props }: Props) {
   let class_name = `
     py-2 px-4
     inline-flex items-center
@@ -23,6 +23,15 @@ export default function Button({children, color, ...props}: Props) {
         border border-transparent bg-gray-500 rounded-xl
         hover:bg-gray-600
         disabled:opacity-50 disabled:pointer-events-none`;
+      break;
+    case "green":
+      class_name = `
+          py-2 px-4
+          inline-flex items-center
+          text-white
+          border border-transparent bg-green-600 rounded-xl
+          hover:bg-green-700
+          disabled:opacity-50 disabled:pointer-events-none`;
       break;
     case "red":
       class_name = `

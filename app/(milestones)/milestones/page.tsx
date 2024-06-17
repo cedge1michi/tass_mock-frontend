@@ -24,6 +24,9 @@ export default function DailyReportDetail() {
   const onClickReset = (event: MouseEvent<HTMLButtonElement>) => {
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/milestones/edit';
+  };
   const onClickNew = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/milestones/new';
   };
@@ -80,6 +83,7 @@ export default function DailyReportDetail() {
         <table className="table-auto w-[100%]">
           <thead>
             <tr className="bg-gray-100">
+              <th className="border p-2">操作</th>
               <th className="border p-2">開始年月</th>
               <th className="border p-2">終了年月</th>
               <th className="border p-2">関与先/業務内容</th>
@@ -91,6 +95,8 @@ export default function DailyReportDetail() {
           </thead>
           <tbody>
             <tr>
+              <td className="border p-2 w-20">
+              </td>
               <td className="border p-2">
                 2023/04
               </td>
@@ -119,6 +125,9 @@ export default function DailyReportDetail() {
               </td>
             </tr>
             <tr className="bg-yellow-50">
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 2023/04
               </td>
@@ -126,7 +135,7 @@ export default function DailyReportDetail() {
                 2024/03
               </td>
               <td className="border p-2">
-                <Anchor href="/milestones/edit">営業会議</Anchor>
+                営業会議
               </td>
               <td className="border p-2">
                 300,000
@@ -142,6 +151,9 @@ export default function DailyReportDetail() {
               </td>
             </tr>
             <tr className="bg-yellow-50">
+              <td className="border p-2 w-20">
+                <Button color="green" onClick={onClickUpdate}>編集</Button>
+              </td>
               <td className="border p-2">
                 2023/04
               </td>
@@ -149,7 +161,7 @@ export default function DailyReportDetail() {
                 2024/03
               </td>
               <td className="border p-2">
-                <Anchor href="/milestones/edit">チーム会議</Anchor>
+                チーム会議
               </td>
               <td className="border p-2">
                 700,000

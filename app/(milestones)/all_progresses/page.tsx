@@ -24,6 +24,9 @@ export default function DailyReport() {
     // 絞り込みのロジックをここに実装
     console.info(event.currentTarget);
   };
+  const onClickUpdate = (event: MouseEvent<HTMLButtonElement>) => {
+    window.location.href = '/client_progresses';
+  };
   const onClickAdd = (event: MouseEvent<HTMLButtonElement>) => {
     window.location.href = '/daily_report_bodies/new';
   }
@@ -121,6 +124,7 @@ export default function DailyReport() {
           <table className="table-auto w-[100%]">
             <thead>
               <tr className="bg-gray-100">
+                <th className="border p-2">操作</th>
                 <th className="border p-2">関与先/業務内容</th>
                 <th className="border p-2">契約報酬</th>
                 <th className="border p-2">目標時間</th>
@@ -133,8 +137,11 @@ export default function DailyReport() {
             </thead>
             <tbody>
               <tr>
+                <td className="border p-2 w-20">
+                  <Button color="green" onClick={onClickUpdate}>詳細</Button>
+                </td>
                 <td className="border p-2">
-                  <Anchor href="/client_progresses">間接業務/営業会議 2024/04-2025/03</Anchor>
+                  間接業務/営業会議 2024/04-2025/03
                 </td>
                 <td className="border p-2">
                   999
