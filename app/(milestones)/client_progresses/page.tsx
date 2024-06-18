@@ -74,7 +74,7 @@ export default function DailyReport() {
             <thead>
               <tr className="bg-gray-100">
                 <th className="border p-2">契約報酬</th>
-                <th className="border p-2">目標時間</th>
+                <th className="border p-2">計画時間</th>
                 <th className="border p-2">消費報酬</th>
                 <th className="border p-2">消費時間</th>
                 <th className="border p-2">進捗率</th>
@@ -117,7 +117,7 @@ export default function DailyReport() {
                 <th className="border p-2">操作</th>
                 <th className="border p-2">担当者</th>
                 <th className="border p-2">契約報酬</th>
-                <th className="border p-2">目標時間</th>
+                <th className="border p-2">計画時間</th>
                 <th className="border p-2">消費報酬</th>
                 <th className="border p-2">消費時間</th>
                 <th className="border p-2">進捗率</th>
